@@ -1,0 +1,255 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard - Surtidorados</title>
+    <script src="https://kit.fontawesome.com/3140323153.js" crossorigin="anonymous"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Chewy&family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <!--favicons de la pagina  -->
+    <link rel="apple-touch-icon" sizes="57x57" href="/assets/favicons/apple-icon-57x57.png">
+    <link rel="apple-touch-icon" sizes="60x60" href="/assets/favicons/apple-icon-60x60.png">
+    <link rel="apple-touch-icon" sizes="72x72" href="/assets/favicons/apple-icon-72x72.png">
+    <link rel="apple-touch-icon" sizes="76x76" href="/assets/favicons/apple-icon-76x76.png">
+    <link rel="apple-touch-icon" sizes="114x114" href="/assets/favicons/apple-icon-114x114.png">
+    <link rel="apple-touch-icon" sizes="120x120" href="/assets/favicons/apple-icon-120x120.png">
+    <link rel="apple-touch-icon" sizes="144x144" href="/assets/favicons/apple-icon-144x144.png">
+    <link rel="apple-touch-icon" sizes="152x152" href="/assets/favicons/apple-icon-152x152.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="/assets/favicons/apple-icon-180x180.png">
+    <link rel="icon" type="image/png" sizes="192x192"  href="/assets/favicons/android-icon-192x192.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="/assets/favicons/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="96x96" href="/assets/favicons/favicon-96x96.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/assets/favicons/favicon-16x16.png">
+    <link rel="stylesheet" href="/assets/css/styleshome.css">
+</head>
+<body>
+    <div class="dashboard-container">
+        <!-- Sidebar -->
+        <aside class="sidebar" id="sidebar">
+             <div class="sidebar-header">
+                <div class="sidebar-logo">
+                    <img src="/assets/logo.png" alt="Logo" class="sidebar-logo-img" alt="Logo" style="width: 70px; height: 60px;">
+                </div>
+                <h3 class="sidebar-title">SURTIDORADOS DE AVES EL GRAN SABOR</h3>
+            </div>
+            
+            <nav class="sidebar-nav">
+                <ul>
+                    <li class="nav-item">
+                        <a href="#" class="nav-link active" onclick="navigateTo('dashboard')">
+                            <i class="nav-icon fa-solid fa-house"></i>
+                            <span class="nav-text">Inicio</span>
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="#" class="nav-link" onclick="navigateTo('ventas')">
+                            <i class="nav-icon fa-solid fa-cash-register"></i>
+                            <span class="nav-text">Registrar ventas</span>
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="#" class="nav-link" onclick="navigateTo('productos')">
+                            <i class="nav-icon fa-solid fa-drumstick-bite"></i>
+                            <span class="nav-text">Registrar productos</span>
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="#" class="nav-link" onclick="navigateTo('inventario')">
+                            <i class="nav-icon fa-solid fa-boxes-stacked"></i>
+                            <span class="nav-text">Inventario</span>
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="#" class="nav-link" onclick="navigateTo('usuarios')">
+                            <i class="nav-icon fa-solid fa-user-plus"></i>
+                            <span class="nav-text">Crear usuario</span>
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="#" class="nav-link" onclick="navigateTo('perfil')">
+                            <i class="nav-icon fa-solid fa-user"></i>
+                            <span class="nav-text">Perfil del usuario</span>
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="#" class="nav-link" onclick="navigateTo('configuracion')">
+                            <i class="nav-icon fa-solid fa-cog"></i>
+                            <span class="nav-text">Configuración</span>
+                        </a>
+                    </li>
+                </ul>
+            </nav>
+        </aside>
+
+        <!-- Main Content -->
+        <main class="main-content">
+            <!-- Header -->
+            <header class="header">
+                <div class="header-left">
+                    <button class="toggle-btn" onclick="toggleSidebar()">
+                        <i class="fa-solid fa-bars"></i>
+                    </button>
+                    <h1 class="page-title" id="pageTitle">Inicio</h1>
+                </div>
+                
+                <div class="header-right">
+                    <div class="header-logo">
+                        <i class="fa-solid fa-drumstick-bite"></i>
+                    </div>
+                    <div class="user-menu" onclick="toggleDropdown()">
+                        <div class="user-avatar">
+                            <i class="fa-solid fa-user"></i>
+                        </div>
+                        <span class="user-name">Admin</span>
+                        <i class="fa-solid fa-chevron-down"></i>
+                        <div class="dropdown-menu" id="dropdownMenu">
+                            <a href="#" class="dropdown-item" onclick="navigateTo('perfil')">
+                                <i class="fa-solid fa-user" style="margin-right: 10px;"></i> Perfil
+                            </a>
+                            <a href="#" class="dropdown-item" onclick="navigateTo('configuracion')">
+                                <i class="fa-solid fa-cog" style="margin-right: 10px;"></i> Configuración
+                            </a>
+                            <div class="dropdown-divider"></div>
+                            <a href="#" class="dropdown-item" style="color: #ff0000;" onclick="cerrarSesion(); return false;">
+                                <i class="fa-solid fa-power-off" style="margin-right: 10px;"></i> Cerrar sesión
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </header>
+
+            <!-- Content Area -->
+            <div class="content-area" id="contentArea">
+                <!-- Dashboard Content -->
+                <div class="welcome-section">
+                    <h2 class="welcome-title">¡Bienvenido a Surtidorados!</h2>
+                    <p class="welcome-subtitle">El mejor pollo doradito - Broaster</p>
+                </div>
+
+                <div class="dashboard-grid">
+                    <div class="dashboard-card">
+                        <div class="card-header">
+                            <h3 class="card-title">Ventas Hoy</h3>
+                            <div class="card-icon">
+                                <i class="fa-solid fa-dollar-sign"></i>
+                            </div>
+                        </div>
+                        <div class="card-value">$2,450,000</div>
+                        <div class="card-description">+15% vs ayer</div>
+                    </div>
+
+                    <div class="dashboard-card">
+                        <div class="card-header">
+                            <h3 class="card-title">Ventas Activas</h3>
+                            <div class="card-icon">
+                                <i class="fa-solid fa-clock"></i>
+                            </div>
+                        </div>
+                        <div class="card-value">23</div>
+                        <div class="card-description">En preparación</div>
+                    </div>
+
+                    <div class="dashboard-card">
+                        <div class="card-header">
+                            <h3 class="card-title">Ingredientes</h3>
+                            <div class="card-icon">
+                                <i class="fa-solid fa-utensils"></i>
+                            </div>
+                        </div>
+                        <div class="card-value">15</div>
+                        <div class="card-description">En inventario</div>
+                    </div>
+
+                    <div class="dashboard-card">
+                        <div class="card-header">
+                            <h3 class="card-title">Usuarios</h3>
+                            <div class="card-icon">
+                                <i class="fa-solid fa-users"></i>
+                            </div>
+                        </div>
+                        <div class="card-value">5</div>
+                        <div class="card-description">Registrados</div>
+                    </div>
+                </div>
+            </div>
+        </main>
+    </div>
+
+    <!-- Modal para crear ventas -->
+    <div class="modal" id="ventaModal">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h3 class="modal-title">Nueva Venta</h3>
+                <button class="modal-close" onclick="closeModal('ventaModal')">&times;</button>
+            </div>
+            <div class="modal-body">
+                <div class="form-group">
+                    <label class="form-label">Producto</label>
+                    <select class="form-control">
+                        <option>Pollo Broaster Completo</option>
+                        <option>Medio Pollo Broaster</option>
+                        <option>Cuarto de Pollo</option>
+                        <option>Papas Fritas</option>
+                        <option>Bebidas</option>
+                        <option>Postres</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label class="form-label">Cantidad</label>
+                    <input type="number" class="form-control" min="1" value="1">
+                </div>
+                <div class="form-group">
+                    <label class="form-label">Precio Unitario</label>
+                    <input type="number" class="form-control" value="25000">
+                </div>
+                <div class="form-group">
+                    <label class="form-label">Total</label>
+                    <input type="number" class="form-control" value="25000" readonly>
+                </div>
+            </div>
+            <div class="modal-footer">
+                <button class="btn btn-secondary" onclick="closeModal('ventaModal')">Cancelar</button>
+                <button class="btn btn-primary">Guardar Venta</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Modal para crear productos -->
+    <div class="modal" id="productoModal">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h3 class="modal-title">Nuevo Producto</h3>
+                <button class="modal-close" onclick="closeModal('productoModal')">&times;</button>
+            </div>
+            <div class="modal-body">
+                <div class="form-group">
+                    <label class="form-label">Nombre del Producto</label>
+                    <input type="text" class="form-control" placeholder="Ej: Pollo Broaster Completo">
+                </div>
+                <div class="form-group">
+                    <label class="form-label">Descripción</label>
+                    <textarea class="form-control" rows="3"></textarea>
+                </div>
+                <div class="form-group">
+                    <label class="form-label">Precio</label>
+                    <input type="number" class="form-control" min="0">
+                </div>
+                <div class="form-group">
+                    <label class="form-label">Categoría</label>
+                    <select class="form-control">
+                        <option>Pollo</option>
+                        <option>Acompañamientos</option>
+                        <option>Bebidas</option>
+                        <option>Postres</option>
+                    </select>
+                </div>
+            </div>
+            <div class="modal-footer">
+                <button class="btn btn-secondary" onclick="closeModal('productoModal')">Cancelar</button>
+                <button class="btn btn-primary">Guardar Producto</button>
+            </div>
+        </div>
+    </div>
+<script src="/assets/js/mainhome.js"></script>
+</body>
+</html>

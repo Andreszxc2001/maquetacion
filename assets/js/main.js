@@ -95,7 +95,7 @@
                     
                     // Redirigir después de un breve delay
                     setTimeout(() => {
-                        window.location.href = 'form.html';
+                        window.location.href = 'home.html';
                     }, 1500);
                     
                 } else {
@@ -141,11 +141,16 @@
             this.classList.remove('error');
         });
 
-        // Verificar si ya hay una sesión activa al cargar la página
-        window.addEventListener('load', function() {
-            const currentUser = sessionStorage.getItem('currentUser');
-            if (currentUser) {
-                // Ya hay una sesión activa, redirigir
-                window.location.href = 'form.html';
-            }
-        });
+       window.addEventListener('load', function() {
+        const currentUser = sessionStorage.getItem('currentUser');
+        const isLoginPage = window.location.pathname.includes('index.html');
+        
+        if (currentUser && isLoginPage) {
+            // Si hay sesión y estamos en la página de login, redirigir a home
+            window.location.href = 'home.html';
+        } else if (!currentUser && !isLoginPage) {
+            // Si no hay sesión y no estamos en login, redirigir a index
+            window.location.href = 'index.html';
+        }
+        // Los demás casos no hacen nada
+    });
