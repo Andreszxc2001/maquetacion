@@ -1,0 +1,446 @@
+body, html {
+            margin: 0;
+            padding: 0;
+            height: 100%;
+            font-family: 'Poppins', sans-serif;
+        }
+
+        main {
+            display: flex;
+            height: 100vh;
+        }
+
+        .card {
+            flex: 1;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            color: #242020;
+            position: relative;
+        }
+
+        .izquierdo {
+            background-color: #ff0000;
+            position: relative;
+        }
+
+        .derecho {
+            background-color: #ffbb00;
+            position: relative;
+            overflow: hidden;
+        }
+
+        /* Iconos decorativos de fondo */
+        .decorative-icons {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            z-index: 1;
+            pointer-events: none;
+        }
+
+        .decorative-icon {
+            position: absolute;
+            color: rgba(255, 255, 255, 0.1);
+            font-size: 2rem;
+            animation: float 6s ease-in-out infinite;
+        }
+
+        .decorative-icon:nth-child(1) { top: 10%; left: 10%; animation-delay: 0s; }
+        .decorative-icon:nth-child(2) { top: 20%; right: 15%; animation-delay: 1s; }
+        .decorative-icon:nth-child(3) { top: 35%; left: 5%; animation-delay: 2s; }
+        .decorative-icon:nth-child(4) { top: 50%; right: 10%; animation-delay: 3s; }
+        .decorative-icon:nth-child(5) { top: 65%; left: 15%; animation-delay: 4s; }
+        .decorative-icon:nth-child(6) { top: 80%; right: 20%; animation-delay: 5s; }
+        .decorative-icon:nth-child(7) { top: 15%; left: 30%; animation-delay: 1.5s; }
+        .decorative-icon:nth-child(8) { top: 45%; right: 30%; animation-delay: 2.5s; }
+        .decorative-icon:nth-child(9) { top: 75%; left: 25%; animation-delay: 3.5s; }
+        .decorative-icon:nth-child(10) { top: 30%; right: 5%; animation-delay: 4.5s; }
+        .decorative-icon:nth-child(11) { top: 55%; left: 35%; animation-delay: 0.5s; }
+        .decorative-icon:nth-child(12) { top: 25%; right: 25%; animation-delay: 1.8s; }
+        .decorative-icon:nth-child(13) { top: 70%; right: 35%; animation-delay: 2.8s; }
+        .decorative-icon:nth-child(14) { top: 40%; left: 8%; animation-delay: 3.8s; }
+        .decorative-icon:nth-child(15) { top: 85%; left: 40%; animation-delay: 4.8s; }
+
+        @keyframes float {
+            0%, 100% { transform: translateY(0px) rotate(0deg); }
+            50% { transform: translateY(-20px) rotate(5deg); }
+        }
+
+        /* Estilos Card de la izquierda */
+        .titulo {
+            position: absolute;
+            top: 30px;
+            left: 50%;
+            transform: translateX(-50%);
+            margin: 0;
+            font-size: 1.8rem;
+            color: #fff;
+            font-family: 'Chewy', cursive;
+            text-align: center;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
+            animation: fadeInDown 1s ease-out;
+        }
+
+        .logo {
+            position: absolute;
+            top: 120px;
+            left: 50%;
+            transform: translateX(-50%);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            animation: bounceIn 1.5s ease-out;
+        }
+
+        .logo-placeholder {
+            width: 300px;
+            height: 200px;
+            background: rgba(255, 255, 255, 0.2);
+            border-radius: 20px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            backdrop-filter: blur(10px);
+            border: 2px solid rgba(255, 255, 255, 0.3);
+        }
+
+        .logo-icon {
+            font-size: 4rem;
+            color: white;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
+        }
+
+        .imgfooter {
+            position: absolute;
+            bottom: 80px;
+            left: 50%;
+            transform: translateX(-50%);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 35px;
+        }
+
+        .img {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            transition: transform 0.3s ease;
+            width: 80px;
+            height: 80px;
+            background: rgba(255, 255, 255, 0.2);
+            border-radius: 50%;
+            backdrop-filter: blur(5px);
+            border: 2px solid rgba(255, 255, 255, 0.3);
+        }
+
+        .img:hover {
+            transform: translateY(-5px);
+        }
+
+        .img i {
+            font-size: 2rem;
+            color: white;
+            text-shadow: 1px 1px 2px rgba(0,0,0,0.3);
+        }
+
+        .finalfooter {
+            position: absolute;
+            bottom: 20px;
+            left: 50%;
+            transform: translateX(-50%);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin: 0;
+            font-size: 1.2rem;
+            color: #fff;
+            font-family: 'Chewy', cursive;
+            text-shadow: 1px 1px 2px rgba(0,0,0,0.3);
+            animation: fadeInUp 1s ease-out 0.5s both;
+        }
+
+        /* Estilos para el formulario */
+        .form-container {
+            background: white;
+            padding: 2.5rem;
+            border-radius: 20px;
+            box-shadow: 0 20px 40px rgba(0,0,0,0.15);
+            width: 90%;
+            max-width: 450px;
+            position: relative;
+            z-index: 2;
+            animation: slideInRight 1s ease-out;
+            max-height: 90vh;
+            overflow-y: auto;
+        }
+
+        .form-title {
+            font-size: 2rem;
+            font-weight: 700;
+            color: #333;
+            margin-bottom: 0.3rem;
+            text-align: center;
+        }
+
+        .form-subtitle {
+            color: #666;
+            text-align: center;
+            margin-bottom: 1.5rem;
+            font-size: 1rem;
+        }
+
+        .form-group {
+            margin-bottom: 1.2rem;
+        }
+
+        .form-label {
+            display: block;
+            margin-bottom: 0.4rem;
+            font-weight: 500;
+            color: #333;
+            font-size: 0.9rem;
+        }
+
+        .form-input {
+            width: 100%;
+            padding: 0.8rem;
+            border: 2px solid #e0e0e0;
+            border-radius: 10px;
+            font-size: 0.95rem;
+            transition: all 0.3s ease;
+            background: #f9f9f9;
+            box-sizing: border-box;
+        }
+
+        .form-input:focus {
+            outline: none;
+            border-color: #ff0000;
+            background: white;
+            box-shadow: 0 0 0 3px rgba(255, 0, 0, 0.1);
+            transform: translateY(-2px);
+        }
+
+        .submit-button {
+            width: 100%;
+            padding: 1rem;
+            background: #ff0000;
+            color: white;
+            border: none;
+            border-radius: 10px;
+            font-size: 1.1rem;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            margin-top: 1rem;
+        }
+
+        .submit-button:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 10px 20px rgba(255, 0, 0, 0.3);
+            background: #e60000;
+        }
+
+        .submit-button:active {
+            transform: translateY(0);
+        }
+
+        .back-link {
+            text-align: center;
+            margin-top: 1rem;
+        }
+
+        .back-link a {
+            color: #ff0000;
+            text-decoration: none;
+            font-weight: 500;
+            transition: color 0.3s ease;
+        }
+
+        .back-link a:hover {
+            text-decoration: underline;
+            color: #e60000;
+        }
+
+        /* Animaciones */
+        @keyframes fadeInDown {
+            from {
+                opacity: 0;
+                transform: translateX(-50%) translateY(-30px);
+            }
+            to {
+                opacity: 1;
+                transform: translateX(-50%) translateY(0);
+            }
+        }
+
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateX(-50%) translateY(30px);
+            }
+            to {
+                opacity: 1;
+                transform: translateX(-50%) translateY(0);
+            }
+        }
+
+        @keyframes bounceIn {
+            0% {
+                opacity: 0;
+                transform: translateX(-50%) scale(0.3);
+            }
+            50% {
+                opacity: 1;
+                transform: translateX(-50%) scale(1.1);
+            }
+            100% {
+                opacity: 1;
+                transform: translateX(-50%) scale(1);
+            }
+        }
+
+        @keyframes slideInRight {
+            from {
+                opacity: 0;
+                transform: translateX(50px);
+            }
+            to {
+                opacity: 1;
+                transform: translateX(0);
+            }
+        }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            main {
+                flex-direction: row;
+            }
+            
+            .izquierdo {
+                display: none;
+            }
+            
+            .derecho {
+                flex: 1;
+                width: 100%;
+            }
+            
+            .form-container {
+                padding: 2rem;
+                margin: 1rem;
+                width: calc(100% - 2rem);
+                max-width: none;
+            }
+            
+            .form-title {
+                font-size: 1.6rem;
+            }
+            
+            .form-subtitle {
+                font-size: 0.9rem;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .form-container {
+                padding: 1.5rem;
+                margin: 0.5rem;
+                width: calc(100% - 1rem);
+                border-radius: 15px;
+            }
+            
+            .form-title {
+                font-size: 1.4rem;
+            }
+            
+            .form-input {
+                padding: 0.7rem;
+                font-size: 0.9rem;
+            }
+            
+            .submit-button {
+                padding: 0.8rem;
+                font-size: 1rem;
+            }
+        }
+         .next-screen-button {
+            width: 250px;
+            padding: 1rem;
+            background: #28a745;
+            color: white;
+            border: none;
+            border-radius: 10px;
+            font-size: 1.1rem;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            position: absolute;
+            top: 40px;
+            right: 60px;
+            z-index: 10;
+        }
+
+        .next-screen-button:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 10px 20px rgba(40, 167, 69, 0.3);
+            background: #218838;
+        }
+
+        .next-screen-button:active {
+            transform: translateY(0);
+        }
+
+        .next-screen-button {
+            width: 250px;
+            padding: 1rem;
+            background: #28a745;
+            color: white;
+            border: none;
+            border-radius: 10px;
+            font-size: 0.9rem;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            position: absolute;
+            top: 10px;
+            right: 60px;
+            z-index: 10;
+        }
+
+        .next-screen-button:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 10px 20px rgba(40, 167, 69, 0.3);
+            background: #218838;
+        }
+
+        .next-screen-button:active {
+            transform: translateY(0);
+        }
+
+        .next-screen-button .button-text {
+            display: inline;
+        }
+
+        /* Responsive para móvil */
+        @media (max-width: 768px) {
+            .next-screen-button {
+                top: 20px;
+                right: 20px;
+                width: 50px;
+                height: 50px;
+                padding: 0;
+                font-size: 1.2rem;
+                border-radius: 50%;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+            }
+            
+            .next-screen-button .button-text {
+                display: none;
+            }
+        }
