@@ -1,6 +1,6 @@
 // Backend simulado - Base de datos de usuarios
 const users = [
-    { username: 'admin', password: 'admin123' },
+    { username: 'admin', password: 'admin' },
     { username: 'usuario', password: 'usuario123' },
     { username: 'gerente', password: 'gerente123' },
     { username: 'empleado', password: 'empleado123' }
