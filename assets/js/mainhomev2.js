@@ -1,37 +1,37 @@
-        //menu deplegable
-        function toggleSidebar() {
-            const sidebar = document.getElementById('sidebar');
-            sidebar.classList.toggle('collapsed');
-            
+// Reemplazar la función toggleSidebar existente por esta:
+function toggleSidebar() {
+    const sidebar = document.getElementById('sidebar');
+    sidebar.classList.toggle('collapsed');
+    
+    // Si está en mobile y se abre el sidebar, agregar overlay
+    if (window.innerWidth <= 768 && !sidebar.classList.contains('collapsed')) {
+        document.body.style.overflow = 'hidden';
+    } else {
+        document.body.style.overflow = 'auto';
+    }
+}
 
-            if (window.innerWidth <= 768 && !sidebar.classList.contains('collapsed')) {
-                document.body.style.overflow = 'hidden';
-            } else {
-                document.body.style.overflow = 'auto';
-            }
+// Agregar esta nueva función
+function closeSidebarOnMobile() {
+    if (window.innerWidth <= 768) {
+        const sidebar = document.getElementById('sidebar');
+        sidebar.classList.add('collapsed');
+        document.body.style.overflow = 'auto';
+    }
+}
+
+// Agregar este event listener
+document.addEventListener('click', function(e) {
+    if (window.innerWidth <= 768) {
+        const sidebar = document.getElementById('sidebar');
+        if (!sidebar.contains(e.target) && !e.target.closest('.toggle-btn')) {
+            sidebar.classList.add('collapsed');
+            document.body.style.overflow = 'auto';
         }
+    }
+});
 
-
-        function closeSidebarOnMobile() {
-            if (window.innerWidth <= 768) {
-                const sidebar = document.getElementById('sidebar');
-                sidebar.classList.add('collapsed');
-                document.body.style.overflow = 'auto';
-            }
-        }
-
-
-        document.addEventListener('click', function(e) {
-            if (window.innerWidth <= 768) {
-                const sidebar = document.getElementById('sidebar');
-                if (!sidebar.contains(e.target) && !e.target.closest('.toggle-btn')) {
-                    sidebar.classList.add('collapsed');
-                    document.body.style.overflow = 'auto';
-                }
-            }
-        });
-
-        //Funciones de los modales
+        // Modal functions
         function openModal(modalId) {
             document.getElementById(modalId).classList.add('show');
         }
@@ -40,22 +40,28 @@
             document.getElementById(modalId).classList.remove('show');
         }
 
+        // Cerrar sesión
         function cerrarSesion() {
-
+            alert("Sesión cerrada correctamente");
+            // Aquí iría la lógica para cerrar sesión
+            // window.location.href = "login.html";
         }
 
+        // Navigation function
         function navigateTo(section) {
+            // Remove active class from all nav links
             document.querySelectorAll('.nav-link').forEach(link => {
                 link.classList.remove('active');
             });
             
+            // Add active class to clicked link
             event.target.closest('.nav-link').classList.add('active');
             
-            
+            // Update page title
             const pageTitle = document.getElementById('pageTitle');
             const contentArea = document.getElementById('contentArea');
             
-
+            // Close dropdown if open
             const dropdown = document.getElementById('dropdownMenu');
             if (dropdown.classList.contains('show')) {
                 dropdown.classList.remove('show');
@@ -253,25 +259,26 @@
             }
         }
 
-
+        // Auto-collapse sidebar on mobile
         window.addEventListener('resize', function() {
             if (window.innerWidth <= 768) {
                 document.getElementById('sidebar').classList.add('collapsed');
             }
         });
 
-
+        // Initialize mobile view
         if (window.innerWidth <= 768) {
             document.getElementById('sidebar').classList.add('collapsed');
         }
 
         function cerrarSesion() {
-
+    // 1. Eliminar los datos de sesión
     sessionStorage.removeItem('currentUser');
     sessionStorage.removeItem('loginTime');
     
-
+    // 2. Redirigir al login (index.html)
     window.location.href = 'index.html';
     
+    // 3. Opcional: Prevenir comportamiento por defecto del enlace
     return false;
 }
