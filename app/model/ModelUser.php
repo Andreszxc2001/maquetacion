@@ -57,10 +57,6 @@ class ModelUsuario{
         ]);    
     }
     
-    
-
-
-
 
 }
 ?>
