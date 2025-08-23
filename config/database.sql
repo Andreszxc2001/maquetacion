@@ -6,6 +6,7 @@ CREATE TABLE `USUARIOS`(
     `tipo_documento` ENUM('CC', 'TI', 'PT', 'OTROS') NOT NULL DEFAULT 'CC',
     `n_documento` VARCHAR(255) NOT NULL,
     `n_telefono` VARCHAR(255) NOT NULL,
+    `email` VARCHAR(255) NOT NULL,
     `usuario` VARCHAR(255) NOT NULL,
     `contrasena` VARCHAR(255) NOT NULL,
     `fecha_creacion` TIMESTAMP NOT NULL,
