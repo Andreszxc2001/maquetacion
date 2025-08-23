@@ -43,7 +43,7 @@ class ModelUsuario{
                     :usuario,
                     :contrasena
                    )";
-    $stmt = $this->conn -> prepare($sql);
+    $stmt = $this->conn->prepare($sql);
     return $stmt -> execute([
         'id_rol'        => $array['id_rol'],
         'nombre'        => $array['nombre'],
