@@ -63,7 +63,7 @@ class ModelUsuario{
     //Funcion: insertar token
     //************************************************ */
     
-     public function token($id_usuario, $token, $expira){
+    public function token($id_usuario, $token, $expira){
         $sql = "INSERT INTO TOKENS (
                     id_usuario,
                     token,
@@ -89,13 +89,35 @@ class ModelUsuario{
 
     public function token_consulta($id_usuario){
         $sql = "SELECT * 
-                FROM TOKENS 
-                WHERE id_usuario = :id_usuario";
+                FROM tokens 
+                WHERE id_usuario = :id_usuario
+                AND expira > NOW()
+                AND usado = 0
+                ORDER BY expira DESC
+                LIMIT 1";
         $stmt = $this->conn->prepare($sql);
-        $stmt -> execute([
-            'id_usuario'    => $id_usuario
-            ]);
-        return $stmt -> fetch();
+        $stmt->execute([
+            'id_usuario' => $id_usuario
+        ]);
+        return $stmt->fetch();
     }
+
+
+    //************************************************ */
+    //Funcion: actualizar uso de token
+    //************************************************ */
+
+    public function token_usar($id_token){
+        $sql = "UPDATE tokens 
+                SET usado = 1 
+                WHERE id_token = :id_token";
+        $stmt = $this->conn->prepare($sql);
+        return $stmt->execute([
+            'id_token' => $id_token
+        ]);
+    }
+
+
+
 }
 ?>
