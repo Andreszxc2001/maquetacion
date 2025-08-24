@@ -1,6 +1,6 @@
 <?php
 //************************************************* */
-//mODULO DE TABLA USUARIO
+//MODULO DE TABLA USUARIO
 //************************************************* */
 require_once $_SERVER['DOCUMENT_ROOT'] . '/maquetacion/config/database.php';
 
@@ -44,7 +44,7 @@ class ModelUsuario{
                     :contrasena
                    )";
     $stmt = $this->conn->prepare($sql);
-    return $stmt -> execute([
+    $stmt -> execute([
         'id_rol'        => $array['id_rol'],
         'nombre'        => $array['nombre'],
         'apellido'      => $array['apellido'],
@@ -54,9 +54,33 @@ class ModelUsuario{
         'email'         => $array['email'],
         'usuario'       => $array['usuario'],
         'contrasena'    => password_hash($array['contrasena'], PASSWORD_DEFAULT)
-        ]);    
+        ]);
+    return $this->conn->lastInsertId();
     }
+
+
+    //************************************************ */
+    //Funcion: insertar token
+    //************************************************ */
     
+     public function token($id_usuario, $token, $expira){
+        $sql = "INSERT INTO TOKENS (
+                    id_usuario,
+                    token,
+                    expira
+            )VALUES (
+                    :id_usuario,
+                    :token,
+                    :expira
+                   )";
+        $stmt = $this->conn->prepare($sql);
+        $stmt -> execute([
+            'id_usuario'    => $id_usuario,
+            'token'         => $token,
+            'expira'        => $expira
+            ]);
+        return $this->conn->lastInsertId();
+    }
 
 }
 ?>

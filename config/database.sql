@@ -146,3 +146,15 @@ CREATE TABLE `ROL_PERMISO_MODULO_OPCION`(
     `fecha_eliminacion` TIMESTAMP NULL,
     PRIMARY KEY(`id_rol`, `id_modulo`, `id_opcion`, `id_permiso`)
 );
+
+CREATE TABLE `tokens` (
+    `id_token` INT UNSIGNED AUTO_INCREMENT PRIMARY KEY,
+    `id_usuario` INT UNSIGNED NOT NULL,
+    `token` VARCHAR(10) NOT NULL,
+    `expira` DATETIME NOT NULL,
+    `usado` TINYINT(1) DEFAULT 0,
+    `creado_en` TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
+    FOREIGN KEY (`id_usuario`) REFERENCES `usuarios`(`id_usuario`)
+        ON DELETE CASCADE
+) ENGINE=InnoDB;
+
