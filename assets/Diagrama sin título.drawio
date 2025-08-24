@@ -61,7 +61,7 @@
           <mxGeometry relative="1" as="geometry" />
         </mxCell>
         <mxCell id="lJreIi_V0ZqFMvAKPOmW-14" value="validación de token" style="rounded=0;whiteSpace=wrap;html=1;" parent="1" vertex="1">
-          <mxGeometry x="370" y="540" width="120" height="60" as="geometry" />
+          <mxGeometry x="370" y="530" width="120" height="60" as="geometry" />
         </mxCell>
         <mxCell id="lJreIi_V0ZqFMvAKPOmW-21" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" parent="1" source="lJreIi_V0ZqFMvAKPOmW-18" target="lJreIi_V0ZqFMvAKPOmW-20" edge="1">
           <mxGeometry relative="1" as="geometry" />
@@ -82,50 +82,79 @@
           </mxGeometry>
         </mxCell>
         <mxCell id="lJreIi_V0ZqFMvAKPOmW-18" value="¿El token es el correcto?" style="rhombus;whiteSpace=wrap;html=1;rounded=0;" parent="1" vertex="1">
-          <mxGeometry x="376.25" y="640" width="107.5" height="110" as="geometry" />
+          <mxGeometry x="376.25" y="805" width="107.5" height="110" as="geometry" />
         </mxCell>
-        <mxCell id="lJreIi_V0ZqFMvAKPOmW-20" value="El token e incorrecto por favor inténtelo nuevamente." style="whiteSpace=wrap;html=1;rounded=0;" parent="1" vertex="1">
-          <mxGeometry x="630" y="665" width="120" height="60" as="geometry" />
-        </mxCell>
-        <mxCell id="lJreIi_V0ZqFMvAKPOmW-28" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" parent="1" source="lJreIi_V0ZqFMvAKPOmW-26" target="lJreIi_V0ZqFMvAKPOmW-27" edge="1">
+        <mxCell id="u7ysXeD0bnDgR75l3-0D-10" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="lJreIi_V0ZqFMvAKPOmW-20" target="u7ysXeD0bnDgR75l3-0D-9">
           <mxGeometry relative="1" as="geometry" />
         </mxCell>
-        <mxCell id="lJreIi_V0ZqFMvAKPOmW-30" value="No" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" parent="lJreIi_V0ZqFMvAKPOmW-28" vertex="1" connectable="0">
-          <mxGeometry x="-0.12" relative="1" as="geometry">
-            <mxPoint as="offset" />
-          </mxGeometry>
+        <mxCell id="lJreIi_V0ZqFMvAKPOmW-20" value="El token e incorrecto por favor inténtelo nuevamente." style="whiteSpace=wrap;html=1;rounded=0;" parent="1" vertex="1">
+          <mxGeometry x="630" y="830" width="120" height="60" as="geometry" />
         </mxCell>
         <mxCell id="lJreIi_V0ZqFMvAKPOmW-37" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" parent="1" source="lJreIi_V0ZqFMvAKPOmW-26" target="lJreIi_V0ZqFMvAKPOmW-36" edge="1">
           <mxGeometry relative="1" as="geometry" />
         </mxCell>
-        <mxCell id="lJreIi_V0ZqFMvAKPOmW-38" value="Si" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" parent="lJreIi_V0ZqFMvAKPOmW-37" vertex="1" connectable="0">
+        <mxCell id="lJreIi_V0ZqFMvAKPOmW-38" value="No" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" parent="lJreIi_V0ZqFMvAKPOmW-37" vertex="1" connectable="0">
           <mxGeometry x="-0.2545" y="-2" relative="1" as="geometry">
             <mxPoint as="offset" />
           </mxGeometry>
         </mxCell>
-        <mxCell id="lJreIi_V0ZqFMvAKPOmW-26" value="¿El token aun es válido y no ha expirado??" style="rhombus;whiteSpace=wrap;html=1;" parent="1" vertex="1">
-          <mxGeometry x="75" y="635" width="130" height="120" as="geometry" />
+        <mxCell id="u7ysXeD0bnDgR75l3-0D-28" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0.5;entryY=1;entryDx=0;entryDy=0;" edge="1" parent="1" source="lJreIi_V0ZqFMvAKPOmW-26" target="lJreIi_V0ZqFMvAKPOmW-27">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="125" y="700" as="targetPoint" />
+          </mxGeometry>
         </mxCell>
-        <mxCell id="lJreIi_V0ZqFMvAKPOmW-40" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=0;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" parent="1" source="lJreIi_V0ZqFMvAKPOmW-27" target="lJreIi_V0ZqFMvAKPOmW-6" edge="1">
+        <mxCell id="u7ysXeD0bnDgR75l3-0D-29" value="Si" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" vertex="1" connectable="0" parent="u7ysXeD0bnDgR75l3-0D-28">
+          <mxGeometry x="0.0667" relative="1" as="geometry">
+            <mxPoint as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="lJreIi_V0ZqFMvAKPOmW-26" value="¿El token ya expiro?" style="rhombus;whiteSpace=wrap;html=1;" parent="1" vertex="1">
+          <mxGeometry x="60" y="795" width="130" height="130" as="geometry" />
+        </mxCell>
+        <mxCell id="lJreIi_V0ZqFMvAKPOmW-40" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0.5;entryY=0;entryDx=0;entryDy=0;exitX=1;exitY=0.5;exitDx=0;exitDy=0;" parent="1" source="u7ysXeD0bnDgR75l3-0D-6" target="lJreIi_V0ZqFMvAKPOmW-6" edge="1">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="140" y="330" as="sourcePoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="u7ysXeD0bnDgR75l3-0D-7" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="lJreIi_V0ZqFMvAKPOmW-27" target="u7ysXeD0bnDgR75l3-0D-6">
           <mxGeometry relative="1" as="geometry" />
         </mxCell>
         <mxCell id="lJreIi_V0ZqFMvAKPOmW-27" value="Pagina de generar nuevo token:&lt;span style=&quot;background-color: transparent; color: light-dark(rgb(0, 0, 0), rgb(255, 255, 255));&quot;&gt;&amp;nbsp;&lt;/span&gt;" style="whiteSpace=wrap;html=1;" parent="1" vertex="1">
-          <mxGeometry x="80" y="500" width="120" height="60" as="geometry" />
+          <mxGeometry x="65" y="500" width="120" height="60" as="geometry" />
         </mxCell>
         <mxCell id="lJreIi_V0ZqFMvAKPOmW-36" value="Usuario creado y validado correctamente." style="whiteSpace=wrap;html=1;" parent="1" vertex="1">
-          <mxGeometry x="80" y="820" width="120" height="60" as="geometry" />
+          <mxGeometry x="65" y="980" width="120" height="60" as="geometry" />
         </mxCell>
-        <mxCell id="lJreIi_V0ZqFMvAKPOmW-41" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=1.033;entryY=0.4;entryDx=0;entryDy=0;entryPerimeter=0;" parent="1" source="lJreIi_V0ZqFMvAKPOmW-20" target="lJreIi_V0ZqFMvAKPOmW-14" edge="1">
-          <mxGeometry relative="1" as="geometry">
-            <Array as="points">
-              <mxPoint x="690" y="564" />
-            </Array>
-          </mxGeometry>
+        <mxCell id="u7ysXeD0bnDgR75l3-0D-6" value="Invalidar token" style="whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="65" y="280" width="120" height="60" as="geometry" />
         </mxCell>
-        <mxCell id="lJreIi_V0ZqFMvAKPOmW-42" value="Redirección a verificación de token" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" parent="lJreIi_V0ZqFMvAKPOmW-41" vertex="1" connectable="0">
-          <mxGeometry x="0.0436" y="1" relative="1" as="geometry">
+        <mxCell id="u7ysXeD0bnDgR75l3-0D-15" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="u7ysXeD0bnDgR75l3-0D-9" target="u7ysXeD0bnDgR75l3-0D-14">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="u7ysXeD0bnDgR75l3-0D-9" value="Registra la cantidad de intentos con el&amp;nbsp; token errado" style="whiteSpace=wrap;html=1;rounded=0;" vertex="1" parent="1">
+          <mxGeometry x="630" y="685" width="120" height="55" as="geometry" />
+        </mxCell>
+        <mxCell id="u7ysXeD0bnDgR75l3-0D-16" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=1;entryY=0.5;entryDx=0;entryDy=0;" edge="1" parent="1" source="u7ysXeD0bnDgR75l3-0D-14" target="lJreIi_V0ZqFMvAKPOmW-14">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="u7ysXeD0bnDgR75l3-0D-17" value="No" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" vertex="1" connectable="0" parent="u7ysXeD0bnDgR75l3-0D-16">
+          <mxGeometry x="-0.037" y="-3" relative="1" as="geometry">
             <mxPoint as="offset" />
           </mxGeometry>
+        </mxCell>
+        <mxCell id="u7ysXeD0bnDgR75l3-0D-20" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=0;exitDx=0;exitDy=0;entryX=0.5;entryY=1;entryDx=0;entryDy=0;" edge="1" parent="1" source="u7ysXeD0bnDgR75l3-0D-14" target="u7ysXeD0bnDgR75l3-0D-21">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="690" y="350" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="u7ysXeD0bnDgR75l3-0D-14" value="¿La cantidad de intentos es mayor a 3?" style="rhombus;whiteSpace=wrap;html=1;rounded=0;" vertex="1" parent="1">
+          <mxGeometry x="625" y="500" width="130" height="120" as="geometry" />
+        </mxCell>
+        <mxCell id="u7ysXeD0bnDgR75l3-0D-22" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" edge="1" parent="1" source="u7ysXeD0bnDgR75l3-0D-21" target="lJreIi_V0ZqFMvAKPOmW-6">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="u7ysXeD0bnDgR75l3-0D-21" value="Invalidar token" style="whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="630" y="280" width="120" height="60" as="geometry" />
         </mxCell>
       </root>
     </mxGraphModel>
