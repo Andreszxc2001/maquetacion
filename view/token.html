@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Verificación de Usuario - Surtidorados</title>
+    <script src="https://kit.fontawesome.com/3140323153.js" crossorigin="anonymous"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Chewy&family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="apple-touch-icon" sizes="57x57" href="/maquetacion/assets/favicons/apple-icon-57x57.png">
+    <link rel="apple-touch-icon" sizes="60x60" href="/maquetacion/assets/favicons/apple-icon-60x60.png">
+    <link rel="apple-touch-icon" sizes="72x72" href="/maquetacion/assets/favicons/apple-icon-72x72.png">
+    <link rel="apple-touch-icon" sizes="76x76" href="/maquetacion/assets/favicons/apple-icon-76x76.png">
+    <link rel="apple-touch-icon" sizes="114x114" href="/maquetacion/assets/favicons/apple-icon-114x114.png">
+    <link rel="apple-touch-icon" sizes="120x120" href="/maquetacion/assets/favicons/apple-icon-120x120.png">
+    <link rel="apple-touch-icon" sizes="144x144" href="/maquetacion/assets/favicons/apple-icon-144x144.png">
+    <link rel="apple-touch-icon" sizes="152x152" href="/maquetacion/assets/favicons/apple-icon-152x152.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="/maquetacion/assets/favicons/apple-icon-180x180.png">
+    <link rel="icon" type="image/png" sizes="192x192"  href="/maquetacion/assets/favicons/android-icon-192x192.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="/maquetacion/assets/favicons/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="96x96" href="/maquetacion/assets/favicons/favicon-96x96.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/maquetacion/assets/favicons/favicon-16x16.png">
+    <link rel="stylesheet" href="/maquetacion/assets/css/stylesform.css">
+</head>
+<body>
+    <main>
+        <div class="card izquierdo">
+            <h2 class="titulo">SURTIDORADOS DE AVES EL GRAN SABOR</h2>
+
+            <div class="logo">
+                <img src="/maquetacion/assets/logo.png" alt="Logo" style="width: 400px; height: auto;">
+            </div>
+
+           <div class="imgfooter">
+                <div class="img">
+                    <img src="/maquetacion/assets/pollo1.png" alt="pollo" style="width: 150px; height: auto;">
+                </div>
+                <div class="img">
+                    <img src="/maquetacion/assets/pollo2.png" alt="pollo" style="width: 150px; height: auto;">
+                </div>
+                <div class="img">
+                    <img src="/maquetacion/assets/pollo3.png" alt="pollo" style="width: 150px; height: auto;">
+                </div>
+            </div>
+
+            <h3 class="finalfooter">El mejor pollo doradito - Broaster</h3>
+        </div>
+
+        <div class="card derecho">
+            <!-- Iconos decorativos de fondo -->
+            <div class="decorative-icons">
+                <i class="decorative-icon fa-solid fa-utensils"></i>
+                <span class="decorative-icon">🍗</span>
+                <span class="decorative-icon">🍕</span>
+                <i class="decorative-icon fa-solid fa-coffee"></i>
+                <span class="decorative-icon">🍔</span>
+                <span class="decorative-icon">🌭</span>
+                <span class="decorative-icon">🍳</span>
+                <i class="decorative-icon fa-solid fa-wine-glass"></i>
+                <span class="decorative-icon">🥓</span>
+                <span class="decorative-icon">🍞</span>
+                <span class="decorative-icon">🍪</span>
+                <span class="decorative-icon">🧀</span>
+                <i class="decorative-icon fa-solid fa-apple-whole"></i>
+                <span class="decorative-icon">🥖</span>
+                <span class="decorative-icon">🥩</span>
+            </div>
+            
+            <div class="form-container">
+                <h2 class="form-title">VERIFICACIÓN DE USUARIO</h2>
+                <p class="form-subtitle">¿Cómo deseas recibir tu código de verificación?</p>
+                
+                <div class="form-group">
+                    <form action="/maquetacion/app/function/token_whats.php" class="form" method="post">
+                        <input type="hidden" name="action" value="WhatsApp">
+                        <button class="submit-button" style="margin-bottom: 15px;">
+                                <i class="fa-brands fa-whatsapp"></i> WhatsApp
+                        </button>
+                    </form>
+                    <form action="/maquetacion/app/function/token_email.php" class="form" method="post">
+                        <input type="hidden" name="action" value="Gmail">
+                        <button class="submit-button" style="margin-bottom: 15px;">
+                                <i class="fa-solid fa-envelope"></i> Gmail
+                        </button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </main>
+</body>
+</html>

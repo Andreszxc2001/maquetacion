@@ -2,6 +2,7 @@
 //************************************************* */
 //CONTROLADOR DE USUARIO
 //************************************************* */
+session_start();
 require_once $_SERVER['DOCUMENT_ROOT'] . '/maquetacion/app/model/ModelUser.php';
 
 
@@ -46,28 +47,34 @@ switch ($action){
                 }
             }
 
-
             //insertar datos
             $id_usuario = $usuario->insertar($array);
 
             if($id_usuario){
-    
-                //generar token de 6 digitos
-                $token  = rand(100000, 999999);
-                $expira = date("Y-m-d H:i:s", strtotime("+5 minutes"));
+
+                // Generar token
+                $token = rand(100000, 999999);
+                $expira = date("Y-m-d H:i:s", strtotime('+5 minutes'));
                 $usuario->Token($id_usuario, $token, $expira);
-
-
-            }else{
-                echo 'Error al crear el usuario';
-            }
             
 
+                $_SESSION['id_usuario'] = $id_usuario;
+                $_SESSION['whatsapp']   = $array['n_telefono'];
+                $_SESSION['email']      = $array['email'];
+
+                header('Location: /maquetacion/view/token.html');
+                exit;
+
+            }else{
+
+                $_SESSION['mensaje'] = 'Error al crear el usuario';
+                header('Location: /maquetacion/view/form.html');
+                exit;
+            }
         }
-
     break;
-}
 
+}
 
 
 

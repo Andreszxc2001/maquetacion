@@ -10,5 +10,4 @@ function enviarCorreo($email, $token){
          ->setMessage("<p>Tu código de verificación es: <b>$token</b></p>")
          ->send();
 }
-
 ?>

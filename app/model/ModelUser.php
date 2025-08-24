@@ -82,5 +82,20 @@ class ModelUsuario{
         return $this->conn->lastInsertId();
     }
 
+
+    //************************************************ */
+    //Funcion: consultar token
+    //************************************************ */
+
+    public function token_consulta($id_usuario){
+        $sql = "SELECT * 
+                FROM TOKENS 
+                WHERE id_usuario = :id_usuario";
+        $stmt = $this->conn->prepare($sql);
+        $stmt -> execute([
+            'id_usuario'    => $id_usuario
+            ]);
+        return $stmt -> fetch();
+    }
 }
 ?>

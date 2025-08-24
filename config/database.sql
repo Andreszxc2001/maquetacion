@@ -9,6 +9,7 @@ CREATE TABLE `USUARIOS`(
     `email` VARCHAR(255) NOT NULL,
     `usuario` VARCHAR(255) NOT NULL,
     `contrasena` VARCHAR(255) NOT NULL,
+    `estado_verificacion` ENUM('VERIFICADO', 'NO VERIFICADO') NOT NULL DEFAULT 'NO VERIFICADO',
     `fecha_creacion` TIMESTAMP NOT NULL,
     `fecha_actualizacion` TIMESTAMP NOT NULL,
     `fecha_eliminacion` TIMESTAMP NOT NULL
