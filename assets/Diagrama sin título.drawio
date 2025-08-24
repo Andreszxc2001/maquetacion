@@ -60,6 +60,11 @@
         <mxCell id="u7ysXeD0bnDgR75l3-0D-32" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" edge="1" parent="1" source="lJreIi_V0ZqFMvAKPOmW-14" target="lJreIi_V0ZqFMvAKPOmW-26">
           <mxGeometry relative="1" as="geometry" />
         </mxCell>
+        <mxCell id="u7ysXeD0bnDgR75l3-0D-45" value="Ingresar token" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" vertex="1" connectable="0" parent="u7ysXeD0bnDgR75l3-0D-32">
+          <mxGeometry x="-0.103" relative="1" as="geometry">
+            <mxPoint as="offset" />
+          </mxGeometry>
+        </mxCell>
         <mxCell id="lJreIi_V0ZqFMvAKPOmW-14" value="validación de token" style="rounded=0;whiteSpace=wrap;html=1;" parent="1" vertex="1">
           <mxGeometry x="370" y="530" width="120" height="60" as="geometry" />
         </mxCell>
@@ -76,7 +81,7 @@
         <mxCell id="u7ysXeD0bnDgR75l3-0D-10" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="lJreIi_V0ZqFMvAKPOmW-20" target="u7ysXeD0bnDgR75l3-0D-9">
           <mxGeometry relative="1" as="geometry" />
         </mxCell>
-        <mxCell id="lJreIi_V0ZqFMvAKPOmW-20" value="El token e incorrecto por favor inténtelo nuevamente." style="whiteSpace=wrap;html=1;rounded=0;" parent="1" vertex="1">
+        <mxCell id="lJreIi_V0ZqFMvAKPOmW-20" value="El token es incorrecto por favor inténtelo nuevamente." style="whiteSpace=wrap;html=1;rounded=0;" parent="1" vertex="1">
           <mxGeometry x="630" y="830" width="120" height="60" as="geometry" />
         </mxCell>
         <mxCell id="u7ysXeD0bnDgR75l3-0D-36" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="lJreIi_V0ZqFMvAKPOmW-26" target="u7ysXeD0bnDgR75l3-0D-35">
@@ -118,6 +123,11 @@
         <mxCell id="u7ysXeD0bnDgR75l3-0D-20" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=0;exitDx=0;exitDy=0;entryX=0.5;entryY=1;entryDx=0;entryDy=0;" edge="1" parent="1" source="u7ysXeD0bnDgR75l3-0D-14" target="u7ysXeD0bnDgR75l3-0D-21">
           <mxGeometry relative="1" as="geometry">
             <mxPoint x="690" y="350" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="u7ysXeD0bnDgR75l3-0D-46" value="Si" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" vertex="1" connectable="0" parent="u7ysXeD0bnDgR75l3-0D-20">
+          <mxGeometry x="-0.186" y="3" relative="1" as="geometry">
+            <mxPoint as="offset" />
           </mxGeometry>
         </mxCell>
         <mxCell id="u7ysXeD0bnDgR75l3-0D-14" value="¿La cantidad de intentos es mayor a 3?" style="rhombus;whiteSpace=wrap;html=1;rounded=0;" vertex="1" parent="1">
