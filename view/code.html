@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Verificación de Usuario - Surtidorados</title>
+    <title>Código de Verificación - Surtidorados</title>
     <script src="https://kit.fontawesome.com/3140323153.js" crossorigin="anonymous"></script>
     <link href="https://fonts.googleapis.com/css2?family=Chewy&family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
     <link rel="apple-touch-icon" sizes="57x57" href="/maquetacion/assets/favicons/apple-icon-57x57.png">
@@ -66,22 +66,36 @@
             </div>
             
             <div class="form-container">
-                <h2 class="form-title">VERIFICACIÓN DE USUARIO</h2>
-                <p class="form-subtitle">¿Cómo deseas recibir tu código de verificación?</p>
+                <h2 class="form-title">CÓDIGO DE VERIFICACIÓN</h2>
+                <p class="form-subtitle">Ingresa el código de 6 dígitos que recibiste</p>
                 
                 <div class="form-group">
-                    <form action="/maquetacion/app/function/token_whats.php" class="form" method="post">
-                        <input type="hidden" name="action" value="WhatsApp">
-                        <button class="submit-button" style="margin-bottom: 15px;">
-                                <i class="fa-brands fa-whatsapp"></i> WhatsApp
+                    <form action="/maquetacion/app/controller/ControllerUser.php" class="form" method="POST">
+                        <label for="verification_code" class="form-label">Código de verificación:</label>
+                        <input type="hidden" name="action" value="verificar">
+                        <input 
+                            type="text" 
+                            id="verification_code" 
+                            name="token" 
+                            class="form-input" 
+                            maxlength="6" 
+                            pattern="[0-9]{6}" 
+                            placeholder="123456"
+                            required
+                            style="text-align: center; font-size: 1.5rem; letter-spacing: 0.5rem; font-weight: bold;"
+                        >
+                        
+                        <button type="submit" class="submit-button">
+                            <i class="fa-solid fa-check"></i> Verificar Código
                         </button>
-                    </form>
-                    <!-- ASEGÚRATE de que sea EXACTAMENTE así -->
-                    <form action="/maquetacion/app/function/token_email.php" class="form" method="POST">
-                        <input type="hidden" name="action" value="Email">
-                        <button type="submit" class="submit-button" style="margin-bottom: 15px;">
-                            <i class="fa-solid fa-envelope"></i> Gmail
-                        </button>
+                        
+                        <div class="back-link">
+                            <a href="javascript:history.back()">← Volver atrás</a>
+                        </div>
+                        
+                        <div class="back-link" style="margin-top: 0.5rem;">
+                            <a href="/maquetacion/app/function/resend_code.php">¿No recibiste el código? Reenviar</a>
+                        </div>
                     </form>
                 </div>
             </div>

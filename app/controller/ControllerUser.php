@@ -74,6 +74,38 @@ switch ($action){
         }
     break;
 
+    case 'verificar':
+
+    if($_SERVER['REQUEST_METHOD'] == 'POST') {
+
+        $id_usuario = $_SESSION['id_usuario'] ?? null;
+        $token      = isset($_POST['token']) ? trim($_POST['token']) : null;
+
+        if(!$id_usuario || !$token){
+            echo 'Faltan datos';
+            exit;
+        }
+
+        if(!method_exists($usuario, 'token_verifica')){
+            die('Error: método token_verifica no existe.');
+        }
+
+        $verificado = $usuario->token_verifica($id_usuario, $token);
+
+        if($verificado){
+            $_SESSION['autenticado'] = true;
+            header('Location: /maquetacion/view/form.html');
+            exit;
+        } else {
+            echo 'Token inválido o expirado.';
+            exit;
+        }
+    }
+
+break;
+
+
+
 }
 
 
