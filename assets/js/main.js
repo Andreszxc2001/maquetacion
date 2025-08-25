@@ -112,7 +112,7 @@ document.getElementById('loginForm').addEventListener('submit', async function(e
             
             // Redirigir después de un breve delay
             setTimeout(() => {
-                window.location.href = 'home.html';
+                window.location.href = 'view/home.html';
             }, 1500);
             
         } else {
