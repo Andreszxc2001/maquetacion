@@ -47,6 +47,7 @@ switch ($action){
                 }
             }
 
+            
             //insertar datos
             $id_usuario = $usuario->insertar($array);
 

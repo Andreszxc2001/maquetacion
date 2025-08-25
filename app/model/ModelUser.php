@@ -58,6 +58,7 @@ class ModelUsuario{
     return $this->conn->lastInsertId();
     }
 
+    
 
     //************************************************ */
     //Funcion: insertar token

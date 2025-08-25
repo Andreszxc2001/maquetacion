@@ -8,6 +8,7 @@ session_start();
 $id_usuario     = $_SESSION['id_usuario'] ?? null;
 $telefono_user  = $_SESSION['whatsapp']   ?? null;
 
+
 // Valida sesión mínima
 if (!$id_usuario || !$telefono_user) {
     http_response_code(400);
